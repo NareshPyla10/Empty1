@@ -1,0 +1,18 @@
+name: Build the project
+
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
+
+jobs:
+  build_the_project:
+  name: Build the Project
+  runs-on: ubuntu-latest
+
+  steps:
+    - name: Checkout Git Repository
+      uses: actions/checkout@v4
+    - name: build the project
+      run: echo "✅ Build workflow running"
